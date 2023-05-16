@@ -1,6 +1,9 @@
+import time
+
 def leibniz(n):
     suma = 0
     dzielnik = 1
+    stStart = time.time()   
 
     for i in range(n):
         if i % 2 == 0:
@@ -8,7 +11,8 @@ def leibniz(n):
         else:
             suma -= 4 / dzielnik
     
-    dzielnik += 2
-    return suma
+        dzielnik += 2
 
-print(leibniz(1000))
+    stStop = time.time()    
+    
+    return [suma, (i + 1), (stStop - stStart)]
