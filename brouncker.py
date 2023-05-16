@@ -12,5 +12,3 @@ def brouncker(n):
     stStop = time()
     
     return [wynik, (n + 1), (stStop - stStart)]
-
-print(brouncker(10000))
