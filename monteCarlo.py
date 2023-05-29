@@ -1,9 +1,14 @@
 import random
 from time import time
+from dokladnosc import dokladnosc
 
-def monteCarlo(punkty):
+def monteCarlo():
     licznik_okr = 0
     licznik_kw = 0
+
+
+    print("\nPrzyblizenie Pi MonteCarlo")
+    punkty = int(input('Podaj zadana liczbe lsowan punktow (zalecana  > 1M): '))
 
     stStart = time()
     for i in range (punkty):
@@ -20,4 +25,4 @@ def monteCarlo(punkty):
         pi = 4 * (licznik_okr / licznik_kw)
     stStop = time()
 
-    return [pi, punkty, (stStop - stStart)]
+    return [pi, dokladnosc(pi), punkty, (stStop - stStart)]

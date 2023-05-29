@@ -1,7 +1,11 @@
 from time import time
+from dokladnosc import dokladnosc
 
-def brouncker(n):
+def brouncker():
     suma = 2
+
+    print("\nPrzyblizenie Pi metoda Williama Brounckera'a")
+    n = int(input('Podaj zadana liczbe powtorzen (zalecana  > 500k): '))
 
     stStart = time()
     licznik = n
@@ -12,4 +16,5 @@ def brouncker(n):
     wynik = 4 / (1 + suma)
     stStop = time()
     
-    return [wynik, licznik, (stStop - stStart)]
+    return [wynik, dokladnosc(wynik), licznik, (stStop - stStart)]
+

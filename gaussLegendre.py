@@ -1,11 +1,15 @@
 from math import sqrt, pow
 from time import time
+from dokladnosc import dokladnosc
 
-def gaussLegendre(n):
+def gaussLegendre():
     an = 1
     bn = 1 / sqrt(2)
     tn = 0.25
     pn = 1
+
+    print("\nPrzyblizenie Pi metoda Gauss'a i Legendre")
+    n = int(input('Podaj zadana liczbe powtorzen (zalecana  <= 1000): '))
 
     stStart = time()
     for i in range(n):
@@ -17,4 +21,4 @@ def gaussLegendre(n):
     
     wynik = pow(an + bn, 2) / (4 * tn)
     stStop = time()
-    return [wynik, (n + 1), (stStop - stStart)]
+    return [wynik, dokladnosc(wynik), (n), (stStop - stStart)]

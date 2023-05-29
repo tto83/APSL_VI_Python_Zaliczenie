@@ -1,9 +1,13 @@
 import time
+from dokladnosc import dokladnosc
 
-def nilakanth(n):
+def nilakanth():
     suma = 3
     licznik = 2
     znak = 1
+
+    print("\nPrzyblizenie Pi metoda Nilakanth'a")
+    n = int(input('Podaj zadana liczbe powtorzen (zalecana  ~10): '))
 
     stStart = time.time()
     for i in range(n):
@@ -12,4 +16,4 @@ def nilakanth(n):
         licznik += 2
     stStop = time.time()
     
-    return [suma, (i + 1), (stStop - stStart)]
+    return [suma, dokladnosc(suma),(i + 1), (stStop - stStart)]
