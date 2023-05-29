@@ -38,7 +38,7 @@ def najCzas(dane):
     print('Najmniejszy czas:')
     i=1
     for key, value in wynik:
-        print(f'{i}. {key}: {value:.6f}')
+        print(f'{i}. {key}: {value:.8f}')
         i += 1
 
     cont = input('\nNacisnij ENTER aby kontynuowac\n')
